@@ -1,4 +1,5 @@
-<%= form_for(@task) do |f| %>
+<div class="card_form">
+  <%= form_for(@task) do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :details %>
@@ -7,3 +8,4 @@
   <%= f.check_box :completed %> <br /><br />
   <%= f.submit %>
 <% end %>
+</div>
