@@ -1,7 +1,11 @@
 <h1><% @task.title %></h1>
 
-  /<ul>
+  <h3><ul>
     <li>Description : <strong><%= @task.details %></strong></li>
   </ul>
-</h1>
+   </h3>
+  <h4> <%= link_to "Edit the task", edit_task_path(@task) %> </h4>
+   <h4> <%= link_to "Return the tasks list", tasks_new_path %> </h4>
+  <h4>⚠️<%= link_to "Delete #{@task.title}", task_path(@task), method: :delete, data: {confirm: "Are you sure?"}  %></h4>
+
 
